@@ -4,7 +4,7 @@
 //
 //  Created by lxy on 15/1/4.
 //  Copyright (c) 2015年 lxy. All rights reserved.
-//
+//  更新返回时 返回原图位置
 
 #import <UIKit/UIKit.h>
 #define kPhotoTag 1000
@@ -18,18 +18,15 @@
 - (void)hidePhotoAlbumWithIndex:(NSInteger)index;
 @end
 
-@interface MmiaPhotoAlbum : UIView <UIScrollViewDelegate>{
-    
-}
+@interface MmiaPhotoAlbum : UIView <UIScrollViewDelegate>{}
 
 @property (nonatomic, assign) CGRect originalFrame;
 
-
-@property (nonatomic,retain) NSArray *imageArray;
-@property (nonatomic,assign) NSInteger curIndex;
+@property (nonatomic, retain) NSArray * imageArray;
+@property (nonatomic, assign) NSInteger curIndex;
 @property (nonatomic, assign) NSInteger firstIndex;
 
-@property (nonatomic, assign) id<MmiaPhotoAlbumDelegate>albumDelegate;
+@property (nonatomic, assign) id <MmiaPhotoAlbumDelegate> albumDelegate;
 
 - (instancetype)initWithArray:(NSArray *)array;
 

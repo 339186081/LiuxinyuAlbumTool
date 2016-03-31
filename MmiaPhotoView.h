@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @protocol MmiaPhotoViewDelegate <NSObject>
-
 // 举报图片
 - (void)reportPhotoWithTag:(NSInteger)tag;
 
@@ -21,14 +20,15 @@
 
 @property (nonatomic, assign) id <MmiaPhotoViewDelegate> photoDelegate;
 
+#pragma mark - property
 // 第一张要显示的图片
 @property (nonatomic, assign) BOOL firstShow;
 // 第一个选中的图片,消失的时候做标记用
 @property (nonatomic, assign) BOOL firstSelectedPhoto;
 
 @property (nonatomic, assign) CGRect originalFrame;
-@property (nonatomic, copy) NSString *imageUrl;
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, copy) NSString * imageUrl;
+@property (nonatomic, strong) UIImageView * imageView;
 
 
 - (void)showImage;
